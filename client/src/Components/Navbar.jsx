@@ -20,10 +20,10 @@ const Navbar = () => {
 
     const menuItems = [
         { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/aboutUs' },
-        { name: 'Service', path: '/service' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'About Us', path: '/' },
+        { name: 'Service', path: '/' },
+        { name: 'Blog', path: '/' },
+        { name: 'Contact', path: '/' },
     ];
 
     return (
@@ -45,7 +45,7 @@ const Navbar = () => {
 
                 {/* Desktop Button */}
                 <div className="hidden md:block">
-                    <Link to="/contact">
+                    <Link to="/">
                         <button className="bg-[#111D15] text-white px-6 py-2 rounded-sm hover:bg-green-700 transition">
                             Get a quote
                         </button>
@@ -77,11 +77,11 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                <Link to="/contact">
+                
                     <button className="mt-4 w-full bg-[#111D15] text-white py-2 rounded-sm hover:bg-green-700 transition">
                         Get a quote
                     </button>
-                </Link>
+                
             </div>
         </nav>
     );

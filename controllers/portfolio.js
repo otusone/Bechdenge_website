@@ -1,4 +1,4 @@
-const Portfolio = require('../models/portfolioModel');
+const Portfolio = require('../models/portfolio');
 
 
 

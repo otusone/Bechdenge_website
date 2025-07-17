@@ -10,7 +10,7 @@ const Hero = () => {
             </div>
 
             {/* Content Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-12 flex flex-col md:flex-wrap lg:flex-row gap-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-12 flex flex-col lg:flex-row gap-10">
 
                 {/* Left Column */}
                 <div className="w-full lg:w-1/3">
@@ -54,7 +54,9 @@ const Hero = () => {
                         </p>
                     </div>
                 </div>
+
             </div>
+
         </div>
     );
 };

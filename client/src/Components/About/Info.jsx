@@ -39,7 +39,7 @@ const Info = () => {
                     <img
                         src={infoPic}
                         alt="Founder Info"
-                        className="rounded-lg shadow-lg w-full max-h-[550px] object-cover"
+                        className="rounded-lg shadow-lg w-full max-h-[410px] object-cover"
                     />
                 </div>
             </div>
