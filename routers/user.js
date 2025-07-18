@@ -9,6 +9,7 @@ const userCtrl=require('../controllers/user');
 
 router.post('/signup',userCtrl.registerUser);
 router.post('/login',userCtrl.loginUser);
+router.post('/logout',userCtrl.logoutUser);
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import contactPhone from '../assets/contactphone.png';
 import contactEmail from '../assets/contactemail.png';
@@ -6,8 +6,40 @@ import contactLocation from '../assets/contactlocation.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faPinterestP, faDribbble, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Footer from '../Components/Footer';
+import axios from 'axios';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        need: '',
+        message: ''
+    });
+
+    // Handle input changes
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    // Submit form
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8000/api/v1/contactForm/create", formData, {
+                headers: { "Content-Type": "application/json" }
+            });
+            console.log(response);
+
+
+            alert(response.data.message || "Message sent successfully!");
+            setFormData({ name: '', email: '', need: '', message: '' });
+        } catch (error) {
+            // console.error("Error submitting contact form", error);
+            alert("Something went wrong, please try again!");
+        }
+    };
+
     return (
         <div>
             <Navbar />
@@ -50,38 +82,62 @@ const Contact = () => {
 
                 {/* Right Side (Form) */}
                 <div className="w-full md:w-1/2">
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label className="block text-sm font-semibold text-black mb-1">Name</label>
-                            <input type="text" placeholder="John Doe" className="w-full border-b border-[#33333380] focus:outline-none py-2" />
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="John Doe"
+                                className="w-full border-b border-[#33333380] focus:outline-none py-2"
+                                required
+                            />
                         </div>
 
                         <div>
                             <label className="block text-sm font-semibold text-black mb-1">Email</label>
-                            <input type="email" placeholder="itagencyc@gmail.com" className="w-full border-b border-[#33333380] focus:outline-none py-2" />
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="itagencyc@gmail.com"
+                                className="w-full border-b border-[#33333380] focus:outline-none py-2"
+                                required
+                            />
                         </div>
 
                         <div>
                             <label className="block text-sm font-semibold text-black mb-2">What do you need?</label>
                             <div className="flex flex-wrap gap-4">
-                                <label className="flex items-center gap-2">
-                                    <input type="radio" name="need" />
-                                    <span>Real Estate</span>
-                                </label>
-                                <label className="flex items-center gap-2">
-                                    <input type="radio" name="need" />
-                                    <span>Hotel</span>
-                                </label>
-                                <label className="flex items-center gap-2">
-                                    <input type="radio" name="need" />
-                                    <span>Restaurant</span>
-                                </label>
+                                {["Real Estate", "Hotel", "Restaurant"].map((option) => (
+                                    <label key={option} className="flex items-center gap-2">
+                                        <input
+                                            type="radio"
+                                            name="need"
+                                            value={option}
+                                            checked={formData.need === option}
+                                            onChange={handleChange}
+                                        />
+                                        <span>{option}</span>
+                                    </label>
+                                ))}
                             </div>
                         </div>
 
                         <div>
                             <label className="block text-sm font-semibold text-black mb-1">Message</label>
-                            <textarea placeholder="Write your message" rows="1" className="w-full border-b border-[#33333380] focus:outline-none py-2 resize-none" />
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                placeholder="Write your message"
+                                rows="1"
+                                className="w-full border-b border-[#33333380] focus:outline-none py-2 resize-none"
+                                required
+                            />
                         </div>
 
                         <button type="submit" className="bg-black text-white py-2 px-6 rounded hover:bg-gray-800 transition duration-300">

@@ -3,7 +3,7 @@ import BlogCards from '../blogCards';
 
 import Navratan from '../../assets/navratan.png';
 import Tiruville from '../../assets/tiruville.png';
-import Gyangarh from '../../assets/gyangarh.png';
+import Gyangarh from '../../assets/hotels&villas.png';
 
 const Blog = () => {
     const blogCards = [
@@ -26,9 +26,8 @@ const Blog = () => {
             desc: (
                 <>
                     Located in the heart of Fatehpura,
-                    Udaipur, I’m hands-on as CEO &
-                    Marketing Head for these fully developed
-                    apartments.
+                    Udaipur, I’m hands-on as CEO & Marketing Head
+                    for these fully developed apartments.
                 </>
             ),
         },
@@ -47,16 +46,19 @@ const Blog = () => {
     ];
 
     return (
-        <section className="px-6 md:px-20 py-12">
-            <h3 className="text-[32px] md:text-[44px] font-semibold text-center md:text-left mb-6">
+        <section className="px-4 sm:px-6 md:px-20 py-10 sm:py-12">
+            {/* Heading */}
+            <h3 className="text-[28px] sm:text-[32px] md:text-[44px] font-semibold text-center md:text-left mb-4 sm:mb-6">
                 How It Works – Real Projects, Real Results
                 <br className="hidden md:block" />
                 Tips & Service News!
             </h3>
 
-            <hr className="bg-[#83A790] h-[2px] w-full mb-8" />
+            {/* Divider */}
+            <hr className="bg-[#83A790] h-[2px] w-full mb-6 sm:mb-8" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Blog Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                 {blogCards.map((item, index) => (
                     <BlogCards
                         key={index}
@@ -72,3 +74,4 @@ const Blog = () => {
 };
 
 export default Blog;
+    

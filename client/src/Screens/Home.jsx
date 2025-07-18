@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 
 
 import Hero from '../Components/Home/Hero';
+import Content from '../Components/Home/Content'
 import Service from '../Components/Home/Service';
 import Quote from '../Components/Home/Quote';
 import Expertise from '../Components/Home/Expertise';
@@ -24,45 +25,27 @@ import Footer from '../Components/Footer';
 
 
 
+
 const Home = () => {
-   
 
-   
 
-   
+
+
+
     return (
         <div className="w-full">
             <Navbar />
             <Hero />
+            <Content />
 
             <Service />
-
+            <Expertise />
             <Quote />
 
-           
-
-            <Expertise />
-
             <About />
-
-
-
-           
             <Testimonial />
-
-          
-
-
             <Blog />
-
-            
-
             <ContactInfo />
-
-
-        
-
-
             <Footer />
         </div>
     );

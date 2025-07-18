@@ -8,7 +8,7 @@ const Testimonial = () => {
     return (
         <section className="bg-[#FAFAFA] py-12 overflow-x-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
-                <div className="flex flex-col lg:flex-row gap-10">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
 
                     {/* Left Section */}
                     <div className="w-full lg:w-1/2">
@@ -21,16 +21,18 @@ const Testimonial = () => {
                             have made a difference in their lives and homes.
                         </p>
 
-                        <div className="flex gap-2">
+                        <div className="flex gap-3">
                             <button
                                 aria-label="Previous"
-                                className="w-10 h-10 border border-black rounded flex items-center justify-center hover:bg-black hover:text-white transition"
+                                className="w-10 h-10 border border-black rounded flex items-center justify-center 
+                                           hover:bg-black hover:text-white transition"
                             >
                                 <FontAwesomeIcon icon={faArrowLeft} />
                             </button>
                             <button
                                 aria-label="Next"
-                                className="w-10 h-10 border border-black rounded flex items-center justify-center hover:bg-black hover:text-white transition"
+                                className="w-10 h-10 border border-black rounded flex items-center justify-center 
+                                           hover:bg-black hover:text-white transition"
                             >
                                 <FontAwesomeIcon icon={faArrowRight} />
                             </button>
@@ -39,13 +41,14 @@ const Testimonial = () => {
 
                     {/* Right Section */}
                     <div className="w-full lg:w-1/2">
-                        <div className="bg-white p-6 rounded-[20px] border-t-[10px] border-r-[10px] border-black shadow-md flex flex-col md:flex-row items-center gap-6">
+                        <div className="bg-white p-5 sm:p-6 md:p-8 rounded-[20px] border-t-[10px] border-r-[10px] border-black 
+                                        shadow-md flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6">
 
                             {/* Testimonial Image */}
                             <img
                                 src={testimonialPic}
                                 alt="Client Testimonial"
-                                className="w-[140px] h-[200px] object-cover rounded-[10px] border border-gray-300"
+                                className="w-[120px] sm:w-[140px] h-[180px] sm:h-[200px] object-cover rounded-[10px] border border-gray-300"
                             />
 
                             {/* Text Content */}
@@ -63,11 +66,11 @@ const Testimonial = () => {
                                     <img
                                         src={Quotation}
                                         alt="Quote"
-                                        className="w-[50px] h-[50px] object-contain"
+                                        className="w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] object-contain"
                                     />
                                 </div>
 
-                                <p className="mt-4 text-sm text-gray-700 leading-relaxed text-justify">
+                                <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
                                     Excellent service! The team was punctual, thorough, and left my home
                                     sparkling clean. Highly recommend for anyone needing a reliable and
                                     detailed cleaning service.

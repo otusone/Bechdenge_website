@@ -1,71 +1,106 @@
 import React from 'react';
-import HotelGyangarh from '../../assets/HotelGyangarh.png';
-import DazzleCafe from '../../assets/DazzleCafe.png';
-import Dhabalogy from '../../assets/Dhabalogy.png';
-import RealEstateSales from '../../assets/Real Estate Sales.png';
-import ParijatVentures from "../../assets/Parijat Ventures.png";
-import RightIcon from "../../assets/rightIcon.png";
+import ProjectCard from './ProjectCard';
+
+import Tiruville from "../../assets/tiruville.png";
+import TiruvilleRoom1 from "../../assets/tiruvilleRoom1.png";
+import TiruvilleRoom2 from "../../assets/tiruvilleRoom2.png";
+import TiruvilleRoom3 from "../../assets/tiruvilleRoom3.png";
+
+import AltitudeApartment from "../../assets/altitudeApartments.png";
+import AltitudeRoom1 from "../../assets/altitudeRoom1.png";
+import AltitudeRoom2 from "../../assets/altitudeRoom2.png";
+import AltitudeRoom3 from "../../assets/altitudeRoom3.png";
+
+import Gyangarh from "../../assets/gyangarh.png";
+import GyangarhRoom1 from "../../assets/gyangarhRoom1.png";
+import GyangarhRoom2 from "../../assets/gyangarhRoom2.png";
+import GyangarhRoom3 from "../../assets/gyangarhRoom3.png";
+
+
+import Dazzle from "../../assets/dazzle.png";
+import DazzleRoom1 from "../../assets/dazzleRoom1.png";
+import DazzleRoom2 from "../../assets/dazzleRoom2.png";
+import DazzleRoom3 from "../../assets/dazzleRoom3.png";
+
+import Navratna from "../../assets/navratna.png";
+import NavratnaRoom1 from "../../assets/navratnaRoom1.png";
+import NavratnaRoom2 from "../../assets/navratnaRoom2.png";
+import NavratnaRoom3 from "../../assets/navratnaRoom3.png";
+
+
 
 const Portfolio = () => {
     const data = [
         {
-            image: HotelGyangarh,
-            Name: "Hotel Gyangarh",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam."
+            name: "Tiruville Apartments",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum.",
+            image1: Tiruville,
+            image2: TiruvilleRoom1,
+            image3: TiruvilleRoom2,
+            image4: TiruvilleRoom3
         },
         {
-            image: DazzleCafe,
-            Name: "Dazzle Rooftop Café",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam."
+            name: "Altitude Apartments",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum.",
+            image1: AltitudeApartment,
+            image2: AltitudeRoom1,
+            image3: AltitudeRoom2,
+            image4: AltitudeRoom3
         },
         {
-            image: Dhabalogy,
-            Name: "Dhabalogy",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam."
+            name: "Hotel Gyangarh",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum.",
+            image1: Gyangarh,
+            image2: GyangarhRoom1,
+            image3: GyangarhRoom2,
+            image4: GyangarhRoom3
         },
         {
-            image: RealEstateSales,
-            Name: "Real Estate Sales",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam."
+            name: "Dazzle Rooftop",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum.",
+            image1: Dazzle,
+            image2: DazzleRoom1,
+            image3: DazzleRoom2,
+            image4: DazzleRoom3
         },
         {
-            image: ParijatVentures,
-            Name: "Parijat Ventures",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam."
+            name: "Navratna Skylight",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum.",
+            image1: Navratna,
+            image2: NavratnaRoom1,
+            image3: NavratnaRoom2,
+            image4: NavratnaRoom3
         },
     ];
 
     return (
         <div className="px-6 md:px-20 py-16 bg-[#F9F9F9]">
+            {/* Heading Section */}
             <div className="text-center mb-12">
                 <h5 className="text-black text-lg font-medium mb-2">Portfolio</h5>
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">Projects — Real Results, No Bullsh*t</h3>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    Projects — Real Results, No Bullsh*t
+                </h3>
                 <p className="text-gray-600 max-w-3xl mx-auto">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt mi blandit et ac elit eros, viverra. Elementum pellentesque sed scelerisque pellentesque auctor accumsan.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt mi
+                    blandit et ac elit eros, viverra. Elementum pellentesque sed scelerisque
+                    pellentesque auctor accumsan.
                 </p>
             </div>
 
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-10">
+            {/* Project Cards */}
+            <div className="space-y-10">
                 {data.map((item, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between gap-4">
-                        <img src={item.image} alt={item.Name} className="w-[376px] h-[376px] object-cover rounded-md mb-4" />
-                        <h4 className="text-2xl font-bold text-black">{item.Name}</h4>
-                        <p className="text-gray-600 text-sm text-justify">{item.desc}</p>
-
-                        <button className="mt-auto flex items-center gap-2 text-black font-medium w-fit border-b-[2px] border-[#0099FF] pb-2 hover:text-[#0099FF] transition">
-                            Read more
-                            <img src={RightIcon} alt="arrow" className="w-4 h-4" />
-                        </button>
-                    </div>
+                    <ProjectCard
+                        key={index}
+                        name={item.name}
+                        desc={item.desc}
+                        image1={item.image1}
+                        image2={item.image2}
+                        image3={item.image3}
+                        image4={item.image4}
+                    />
                 ))}
-            </div>
-
-
-            <div className="flex justify-center mt-10">
-                <button className="bg-black text-white rounded px-6 py-2 hover:bg-gray-800 transition duration-300">
-                    See All Portfolio
-                </button>
             </div>
         </div>
     );
