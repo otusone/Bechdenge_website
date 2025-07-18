@@ -39,8 +39,8 @@ exports.getAllPortfolios = async (req, res) => {
 exports.getPortfolioById = async (req, res) => {
     try {
 
-        const { id } = req.params.id;
-        
+        const id = req.params.id;
+
         const project = await Portfolio.findById(id);
 
         if (!project) {

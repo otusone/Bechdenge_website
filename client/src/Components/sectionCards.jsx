@@ -3,7 +3,7 @@ import Arrow from '../assets/arrowIcon.png';
 
 const Frame1Cards = ({ image, h3, desc, showButton = true }) => {
     return (
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden w-full max-w-[370px] mx-auto">
+        <div className="bg-white rounded-2xl hover:shadow-md overflow-hidden w-full max-w-[370px] mx-auto">
             {/* Image */}
             <img
                 src={image}
@@ -21,7 +21,7 @@ const Frame1Cards = ({ image, h3, desc, showButton = true }) => {
                 {/* Button */}
                 {showButton && (
                     <button className="flex items-center gap-2 border border-[#111D15] rounded px-4 py-2 text-[#111D15] font-semibold hover:bg-black hover:text-white transition">
-                        Book Now
+                        Get Now
                         <img src={Arrow} alt="Arrow" className="w-3 h-3 mt-[1px]" />
                     </button>
                 )}

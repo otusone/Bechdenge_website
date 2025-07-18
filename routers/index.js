@@ -11,5 +11,9 @@ const portfolio = require('./portfolio')
 router.use("/portfolio", portfolio);
 
 
+const contactForm = require('./contactForm')
+router.use("/contactForm", contactForm);
+
+
 
 module.exports = router;

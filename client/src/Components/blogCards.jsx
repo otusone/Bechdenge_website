@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogCards = ({ image, subhead, h3, desc }) => {
     return (
-        <div className="bg-white rounded-[30px] shadow-md overflow-hidden flex flex-col w-full">
+        <div className="bg-white rounded-[30px] hover:shadow-md overflow-hidden flex flex-col w-full">
             {/* Image Section */}
             <div className="h-[230px] md:h-[270px]">
                 <img
@@ -22,7 +22,7 @@ const BlogCards = ({ image, subhead, h3, desc }) => {
 
                 {/* Read More Button */}
                 <div className="mt-6">
-                    <button className="w-full py-2 px-4 border border-black text-sm font-medium text-black rounded-[10px] hover:bg-black hover:text-white transition">
+                    <button className="w-full py-2 px-4 border-t underline hover:underline:no border-black text-sm font-medium text-black rounded-[10px] hover:bg-black hover:text-white transition">
                         Read More
                     </button>
                 </div>
