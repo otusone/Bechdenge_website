@@ -7,6 +7,7 @@ import Home from './Screens/Home'
 import { Routes, Route } from 'react-router-dom';
 import Project from "./Screens/Project";
 import Service from './Screens/Service';
+import AllImagesPage from './Components/Project/AllImagesPage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/about' element={<AboutUs />} />
         <Route path='/projects' element={<Project />} />
         <Route path='/service' element={<Service />} />
+        <Route path="/images/:cardName" element={<AllImagesPage />} />
       </Routes>
     </>
   )

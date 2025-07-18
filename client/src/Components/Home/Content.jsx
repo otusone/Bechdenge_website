@@ -29,29 +29,31 @@ const Content = () => {
             {/* Right Content (Images) */}
             <div className="flex-1 flex justify-center relative mt-8 md:mt-12 lg:mt-0">
                 {/* Container for images */}
-                <div className="relative w-[200px] sm:w-[220px] h-[200px] sm:h-[220px] mb-10 md:mb-16">
-                    <div className="absolute top-0 right-0 w-[150px] sm:w-[204px] h-[150px] sm:h-[204px] rounded-xl overflow-hidden shadow-md">
+                <div className="relative w-[260px] sm:w-[300px] h-[260px] sm:h-[300px] mb-10 md:mb-16">
+                    <div className="absolute top-0 right-0 w-[190px] sm:w-[240px] h-[190px] sm:h-[240px] rounded-xl overflow-hidden shadow-md">
                         <img src={pic2} alt="pic2" className="w-full h-full object-cover" />
                     </div>
 
-                    <div className="absolute bottom-[-10px] left-[-20px] sm:left-[-30px] w-[90px] sm:w-[125px] h-[100px] sm:h-[143px] rounded-xl overflow-hidden shadow-md">
+                    <div className="absolute bottom-[-10px] left-[-20px] sm:left-[-30px] w-[110px] sm:w-[150px] h-[120px] sm:h-[170px] rounded-xl overflow-hidden shadow-md">
                         <img src={pic1} alt="pic1" className="w-full h-full object-cover" />
                     </div>
 
-                    <div className="absolute top-[-25px] sm:top-[-35px] right-[-90px] sm:right-[-134px] w-[90px] sm:w-[125px] h-[100px] sm:h-[143px] rounded-xl overflow-hidden shadow-md">
+                    <div className="absolute top-[-30px] sm:top-[-45px] right-[-100px] sm:right-[-150px] w-[110px] sm:w-[150px] h-[120px] sm:h-[170px] rounded-xl overflow-hidden shadow-md">
                         <img src={pic3} alt="pic3" className="w-full h-full object-cover" />
                     </div>
 
-                    <div className="absolute bottom-[-70px] sm:bottom-[-100px] right-[-100px] sm:right-[-140px] w-[140px] sm:w-[204px] h-[140px] sm:h-[204px] rounded-xl overflow-hidden shadow-md">
+                    <div className="absolute bottom-[-90px] sm:bottom-[-130px] right-[-110px] sm:right-[-160px] w-[170px] sm:w-[240px] h-[170px] sm:h-[240px] rounded-xl overflow-hidden shadow-md">
                         <img src={pic4} alt="pic4" className="w-full h-full object-cover" />
                     </div>
 
-                    <div className="absolute bottom-[-90px] sm:bottom-[-128px] right-[-10px] w-[90px] sm:w-[125px] h-[100px] sm:h-[143px] rounded-xl overflow-hidden shadow-md">
+                    <div className="absolute bottom-[-100px] sm:bottom-[-140px] right-[-20px] w-[110px] sm:w-[150px] h-[120px] sm:h-[170px] rounded-xl overflow-hidden shadow-md">
                         <img src={pic5} alt="pic5" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
-        </div>
+
+ 
+        </div >
     );
 };
 
