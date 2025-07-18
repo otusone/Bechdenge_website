@@ -27,7 +27,7 @@ const About = () => {
                 {/* Right Side: Text Content */}
                 <div className="w-full md:w-1/2 max-w-2xl text-left">
                     <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-snug">
-                        Welcome To Our <br /> Pro-cleaning Company!
+                        REAL ESTATE with a <br />REALITY CHECK
                     </h2>
 
                     <p className="text-gray-700 text-sm sm:text-base mb-8 text-justify">
